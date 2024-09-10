@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Last posts</h1>
+  <div class="post-actions">
+    <a href="{% url 'create_post' %}" class="btn-add-post">Add post</a>
+  </div>
+  <div class="post-list">
+      {% for post in posts %}
+          {% include 'posts/post_item.html' %}
+      {% endfor %}
+  </div>
+{% endblock %}

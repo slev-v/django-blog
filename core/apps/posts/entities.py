@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from datetime import datetime
 
+from core.apps.users.entities import User
+
 
 @dataclass
 class Post:
@@ -8,4 +10,5 @@ class Post:
     title: str
     content: str
     created_at: datetime
-    user_id: int
+    user: User
+    reputation: int

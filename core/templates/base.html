@@ -4,37 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Blog{% endblock %}</title>
-    <!-- <link rel="stylesheet" href="{% static 'styles.css' %}"> -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <header>
+    <header class="">
         <div class="container">
             <nav>
-                <ul>
+                <div class="nav-links">
+                    <a href="{% url 'post_feed' %}">Feed</a>
+                </div>
+                <div class="user-info">
                     {% if user.is_authenticated %}
-                        <li>Welcome, {{ user.username }}</li>
-                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                        <a href="{% url 'profile' user.id %}">{{ user.username }}</a>
+                        <form method="post" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn-logout">Logout</button>
+                        </form>
                     {% else %}
-                        <li><a href="{% url 'login' %}">Login</a></li>
-                        <li><a href="{% url 'register' %}">Register</a></li>
+                        <div class="nav-links">
+                            <a href="{% url 'login' %}">Login</a>
+                            <a href="{% url 'signup' %}">Sign Up</a>
+                        </div>
                     {% endif %}
-                </ul>
+                </div>
             </nav>
         </div>
     </header>
-
-    <main>
-        <div class="container">
-            {% block content %}
-            <!-- Content will be injected here -->
-            {% endblock %}
-        </div>
+    
+    <main class="content, container">
+        {% block content %}
+        {% endblock %}
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; {{ current_year }} My Blog</p>
-        </div>
-    </footer>
 </body>
 </html>

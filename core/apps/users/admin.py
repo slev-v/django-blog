@@ -9,11 +9,10 @@ class CustomUserAdmin(UserAdmin):
     list_display = [
         "email",
         "username",
-        "karma",
         "is_staff",
     ]
-    fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("karma",)}),)
-    add_fieldsets = UserAdmin.add_fieldsets + ((None, {"fields": ("karma",)}),)
+    fieldsets = UserAdmin.fieldsets
+    add_fieldsets = UserAdmin.add_fieldsets
 
 
 admin.site.register(CustomUser, CustomUserAdmin)

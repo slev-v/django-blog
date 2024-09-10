@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ post.title }}</title>
-</head>
-<body>
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
-    <p>Created at: {{ post.created_at }}</p>
-    <a href="{% url 'create_post' %}">Create new post</a>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    {% include 'posts/post_item.html' %}
+{% endblock %}

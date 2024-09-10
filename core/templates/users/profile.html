@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ user.username }}'s Profile</h1>
+  <p>Email: {{ user.email }}</p>
+  <p>Karma: {{ user.get_karma }}</p>
+
+  <h2>Posts by {{ user.username }}</h2>
+  <ul>
+      {% for post in posts %}
+          {% include 'posts/post_item.html' %}
+      {% endfor %}
+  </ul>
+{% endblock %}

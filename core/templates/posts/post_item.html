@@ -1,0 +1,23 @@
+<div class="post-item">
+    <h2><strong><a href="{% url 'get_post' post.id %}" class="post-title">{{ post.title }}</a></strong></h2>
+    <p>{{ post.content }}</p>
+    <p><strong>Created by:</strong> {{ post.user.username }}<p>
+    <p><strong>Posted on</strong>: {{ post.created_at }}</p>
+    <p><strong>Reputation</strong>
+      {% if post.reputation and post.reputation != 0 %}
+        {{ post.reputation }}
+      {% elif post.reputation == 0 %}
+        0
+      {% else %}
+        {{ post.get_reputation }}
+      {% endif %}
+    </p>
+    <div class="vote-buttons">
+        <a href="{% url 'vote' post.id 1 %}?next={{ request.path}}" class="btn-vote">+1</a>
+        <a href="{% url 'vote' post.id 2 %}?next={{ request.path}}" class="btn-vote">-1</a>
+    </div>
+    {% if user.is_authenticated and user == post.user %}
+      <a href="{% url 'update_post' post.id %}" class="btn-edit">Edit</a>
+      <a href="{% url 'delete_post' post.id %}" class="btn-edit">Delete</a>
+    {% endif %}
+</div>
