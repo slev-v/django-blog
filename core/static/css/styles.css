@@ -1,79 +1,70 @@
-/* Стиль для общего фона и шрифтов */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #212121; /* Основной тёмный фон */
-    color: #D0D0D0; /* Цвет текста */
+    background-color: #212121;
+    color: #D0D0D0;
 }
 
-/* Стиль для шапки */
 header {
-    background-color: #333; /* Тёмный фон для шапки */
-    padding: 15px 0; /* Вертикальные отступы в шапке */
-    border-bottom: 1px solid #444; /* Тонкая граница снизу */
-    width: 100%; /* Занимает всю ширину экрана */
-    box-sizing: border-box; /* Включает отступы и границы в ширину */
+    background-color: #333;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Контейнер для выравнивания содержимого */
 .container {
-    width: 90%; /* Основная ширина контейнера */
-    max-width: 1200px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Центрирование контейнера по горизонтали */
-    padding: 20px; /* Отступы внутри контейнера */
-    box-sizing: border-box; /* Включение отступов и границ в ширину контейнера */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Стиль для навигации */
 nav {
     display: flex;
-    justify-content: space-between; /* Разделяет элементы на лево и право */
+    justify-content: space-between;
     align-items: center;
 }
 
-/* Стили для ссылок в навигации */
 nav a {
-    font-size: 18px; /* Размер шрифта для ссылок */
-    color: #D0D0D0; /* Цвет текста ссылок в шапке */
+    font-size: 18px;
+    color: #D0D0D0;
     text-decoration: none;
 }
 
 nav a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline;
 }
 
-
-/* Стиль для форм */
 main form {
-    max-width: 600px; /* Ширина формы */
-    margin: 0 auto; /* Центрирование формы по горизонтали */
-    padding: 20px; /* Внутренние отступы формы */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
     border-radius: 8px;
-    background-color: #2e2e2e; /* Фон формы */
-    color: #D0D0D0; /* Цвет текста внутри формы */
-    box-sizing: border-box; /* Включение отступов и границ в ширину формы */
+    background-color: #2e2e2e;
+    color: #D0D0D0;
+    box-sizing: border-box;
 }
 
-/* Стиль для полей ввода */
 input[type="text"],
 input[type="password"],
 input[type="email"],
 textarea {
-    width: calc(100% - 22px); /* Ширина полей ввода с учётом отступов */
+    width: calc(100% - 22px);
     padding: 10px;
-    margin-bottom: 15px; /* Отступ снизу */
-    border: 1px solid #555; /* Цвет границы */
-    border-radius: 4px; /* Скругление углов */
-    background-color: #333; /* Фон полей */
-    color: #D0D0D0; /* Цвет текста внутри полей */
-    box-sizing: border-box; /* Включение отступов и границ в ширину полей */
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #333;
+    color: #D0D0D0;
+    box-sizing: border-box;
 }
 
-/* Стиль для кнопок */
 button {
-    background-color: #555; /* Цвет фона кнопки */
-    color: #D0D0D0; /* Цвет текста кнопки */
+    background-color: #555;
+    color: #D0D0D0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -81,29 +72,29 @@ button {
 }
 
 button:hover {
-    background-color: #777; /* Цвет фона кнопки при наведении */
+    background-color: #777;
 }
 
 a {
-    color: #f4f4f4; /* Цвет текста ссылок */
-    text-decoration: none; /* Убирает подчеркивание */
+    color: #f4f4f4;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline;
 }
 
 a:visited {
-    color: #f4f4f4; /* Цвет ссылок после их посещения */
+    color: #f4f4f4;
 }
 
 a:active {
-    color: #e0e0e0; /* Цвет ссылок при нажатии */
+    color: #e0e0e0;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #f4f4f4; /* Цвет ссылок */
+    color: #f4f4f4;
 }
 
 .nav-links a:hover {
@@ -116,12 +107,12 @@ a:active {
 }
 
 .user-info a {
-    color: #f4f4f4; /* Цвет ссылки пользователя */
+    color: #f4f4f4;
     margin-right: 10px;
 }
 
 .user-info form {
-    display: inline; /* Форма в одну строку */
+    display: inline;
 }
 
 .user-info button {
@@ -139,66 +130,66 @@ a:active {
 .content {
     padding: 20px;
 }
-/* Стиль для постов */
+
 .post-item {
-    background-color: #2e2e2e; /* Вспомогательный цвет фона */
-    border: 1px solid #444; /* Цвет рамки поста */
-    border-radius: 8px; /* Скругление углов рамки */
-    padding: 15px; /* Отступы внутри поста */
-    margin-bottom: 20px; /* Отступ снизу */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень для выделения */
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .post-item h2 {
-    margin-top: 0; /* Убирает отступ сверху у заголовка */
-    font-size: 20px; /* Размер шрифта заголовка */
+    margin-top: 0;
+    font-size: 20px;
 }
 
 .post-item .post-title {
-    color: #D0D0D0; /* Цвет заголовка поста */
+    color: #D0D0D0;
     text-decoration: none;
 }
 
 .post-item .post-title:hover {
-    text-decoration: underline; /* Подчеркивание при наведении на заголовок поста */
+    text-decoration: underline;
 }
 
 .vote-buttons {
-    margin-top: 15px; /* Отступ сверху для кнопок голосования */
+    margin-top: 15px;
 }
 
 .btn-vote {
-    background-color: #555; /* Цвет фона кнопки голосования */
-    color: #D0D0D0; /* Цвет текста кнопки голосования */
-    padding: 5px 10px; /* Внутренние отступы кнопки голосования */
-    border-radius: 4px; /* Скругление углов кнопки голосования */
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-    margin-right: 10px; /* Отступ справа для разделения кнопок */
+    background-color: #555;
+    color: #D0D0D0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 10px;
 }
 
 .btn-vote:hover {
-    background-color: #777; /* Цвет фона кнопки голосования при наведении */
+    background-color: #777;
 }
 
 .btn-add-post {
-    background-color: #555; /* Цвет фона кнопки */
-    color: #D0D0D0; /* Цвет текста кнопки */
+    background-color: #555;
+    color: #D0D0D0;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-    display: inline-block; /* Чтобы кнопка занимала место по ширине содержимого */
-    margin: 10px 0; /* Отступ сверху и снизу */
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
 }
 
 .btn-edit {
-    background-color: #777; /* Цвет фона кнопки редактирования */
-    color: #D0D0D0; /* Цвет текста кнопки */
+    background-color: #777;
+    color: #D0D0D0;
     padding: 10px 15px;
     border-radius: 4px;
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-    display: inline-block; /* Чтобы кнопка занимала место по ширине содержимого */
-    margin: 10px 0; /* Отступ сверху и снизу */
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
 }
